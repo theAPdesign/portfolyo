@@ -7,7 +7,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "mkdir -p dist && cp index.html 404.html styles.css script.js dist/",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html 404.html styles.css dist/ && cp -R assets dist/assets",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
