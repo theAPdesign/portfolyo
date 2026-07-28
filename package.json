@@ -1,0 +1,16 @@
+{
+  "name": "portfolyo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && cp 404.html dist/404.html",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.26.0"
+  }
+}
