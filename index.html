@@ -8,31 +8,29 @@
       name="description"
       content="The AP Design icin sade, modern ve responsive portfolyo ana sayfasi."
     >
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/favicon.png">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav" aria-label="Ana menu">
-        <a class="brand" href="./" aria-label="The AP Design ana sayfa">
-          <span class="brand-mark">AP</span>
-          <span>The AP Design</span>
+      <nav class="nav-pill" aria-label="Ana menu">
+        <a class="brand-orb" href="./" aria-label="The AP Design ana sayfa">
+          <img src="./assets/favicon.png" alt="" width="40" height="40">
         </a>
         <div class="nav-links">
+          <a class="active" href="./">Anasayfa</a>
           <a href="#hakkimda">Hakkımda</a>
           <a href="#projeler">Projeler</a>
           <a href="#iletisim">İletişim</a>
         </div>
-        <button class="theme-toggle" type="button" aria-label="Temayi degistir" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">●</span>
-          <span class="theme-label">Tema</span>
-        </button>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Portfolyo</p>
+          <p class="hero-tag">Portfolyo</p>
           <h1 id="hero-title">Merhaba, ben yaratıcı bir tasarımcıyım.</h1>
           <p class="hero-text">
             Markalar için sade, işlevsel ve akılda kalıcı dijital deneyimler tasarlıyorum.
@@ -41,11 +39,6 @@
             <a class="button primary" href="#projeler">Projelerimi Gör</a>
             <a class="button secondary" href="#iletisim">İletişime Geç</a>
           </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-card art-card-one"></div>
-          <div class="art-card art-card-two"></div>
-          <div class="art-card art-card-three"></div>
         </div>
       </section>
 
@@ -128,7 +121,5 @@
         <a href="https://behance.net/username" rel="noreferrer">Behance</a>
       </div>
     </footer>
-
-    <script src="./script.js"></script>
   </body>
 </html>
