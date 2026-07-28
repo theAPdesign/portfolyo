@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The AP Design | Portfolyo</title>
+    <meta
+      name="description"
+      content="The AP Design icin sade, modern ve responsive portfolyo ana sayfasi."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Ana menu">
+        <a class="brand" href="./" aria-label="The AP Design ana sayfa">
+          <span class="brand-mark">AP</span>
+          <span>The AP Design</span>
+        </a>
+        <div class="nav-links">
+          <a href="#hakkimda">Hakkımda</a>
+          <a href="#projeler">Projeler</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Temayi degistir" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">●</span>
+          <span class="theme-label">Tema</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolyo</p>
+          <h1 id="hero-title">Merhaba, ben yaratıcı bir tasarımcıyım.</h1>
+          <p class="hero-text">
+            Markalar için sade, işlevsel ve akılda kalıcı dijital deneyimler tasarlıyorum.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projeler">Projelerimi Gör</a>
+            <a class="button secondary" href="#iletisim">İletişime Geç</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-card art-card-one"></div>
+          <div class="art-card art-card-two"></div>
+          <div class="art-card art-card-three"></div>
+        </div>
+      </section>
+
+      <section id="hakkimda" class="section about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">Hakkımda</p>
+          <h2 id="about-title">Fikirleri yalın ve etkili görsellere dönüştürüyorum.</h2>
+        </div>
+        <div class="about-content">
+          <p>
+            Burası sonradan kolayca güncelleyebileceğin kısa bir tanıtım alanı.
+            Tasarım sürecimde markanın karakterini, kullanıcı ihtiyacını ve sade
+            bir görsel dili aynı çizgide buluşturmaya odaklanıyorum.
+          </p>
+          <ul class="tag-list" aria-label="Yetenekler">
+            <li>Grafik Tasarım</li>
+            <li>UI/UX</li>
+            <li>Marka Kimliği</li>
+            <li>Web Tasarım</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projeler" class="section projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projeler</p>
+          <h2 id="projects-title">Seçili çalışmalar</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual visual-one" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-category">Marka Kimliği</p>
+              <h3>Studio Nova</h3>
+              <p>Minimal logo sistemi, renk paleti ve sosyal medya şablonları.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual visual-two" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-category">UI/UX</p>
+              <h3>Flow Dashboard</h3>
+              <p>Veri takibi için sade, okunabilir ve responsive arayüz tasarımı.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual visual-three" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-category">Web Tasarım</p>
+              <h3>Local Goods</h3>
+              <p>Küçük işletmeler için hızlı açılan tanıtım ve ürün vitrini sayfası.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="iletisim" class="section contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">İletişim</p>
+          <h2 id="contact-title">Yeni bir fikir konuşalım.</h2>
+        </div>
+        <div class="contact-panel">
+          <p>
+            Projen, marka kimliğin veya web tasarım ihtiyacın için e-posta ya da
+            sosyal medya üzerinden ulaşabilirsin.
+          </p>
+          <div class="contact-links" aria-label="Iletisim baglantilari">
+            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="https://instagram.com/username" rel="noreferrer">Instagram</a>
+            <a href="https://behance.net/username" rel="noreferrer">Behance</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 The AP Design</p>
+      <div class="footer-links">
+        <a href="https://instagram.com/username" rel="noreferrer">Instagram</a>
+        <a href="https://behance.net/username" rel="noreferrer">Behance</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
