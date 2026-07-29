@@ -81,7 +81,8 @@ a {
 
 .nav-links {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0;
   align-items: center;
   justify-content: flex-start;
   gap: 3px;
@@ -549,6 +550,22 @@ h3 {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
+  overflow: hidden;
+  transition: max-height 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tool-card.is-hidden {
+  display: none;
+}
+
+.tools-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.tools-more[hidden] {
+  display: none;
 }
 
 .tool-card {
@@ -953,6 +970,8 @@ h3 {
   z-index: 3;
   width: 44px;
   height: 44px;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line-strong);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.76);
@@ -967,9 +986,7 @@ h3 {
 
 .modal-nav::before {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: block;
   width: 12px;
   height: 12px;
   border-top: 2px solid currentColor;
@@ -977,11 +994,11 @@ h3 {
 }
 
 .modal-prev::before {
-  transform: translate(-42%, -50%) rotate(-135deg);
+  transform: translateX(2px) rotate(-135deg);
 }
 
 .modal-next::before {
-  transform: translate(-58%, -50%) rotate(45deg);
+  transform: translateX(-2px) rotate(45deg);
 }
 
 .modal-nav:hover,
@@ -1197,9 +1214,13 @@ body.modal-open {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    padding: 0 10px;
+  }
+
   .nav-pill {
-    width: fit-content;
-    max-width: calc(100% - 16px);
+    width: 100%;
+    max-width: 620px;
     min-height: 50px;
     padding: 6px 8px;
   }
@@ -1226,8 +1247,8 @@ body.modal-open {
 
   .nav-links a {
     min-height: 36px;
-    padding: 0 12px;
-    font-size: 14px;
+    padding: 0 10px;
+    font-size: 13px;
   }
 
   .about {
@@ -1306,8 +1327,30 @@ body.modal-open {
   }
 
   .nav-pill {
-    gap: 7px;
+    min-height: 44px;
+    gap: 5px;
     border-radius: 999px;
+    padding: 5px;
+  }
+
+  .brand-orb {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-orb img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    min-height: 32px;
+    padding: 0 7px;
+    font-size: 11.5px;
   }
 
   .hero,
@@ -1412,7 +1455,7 @@ body.modal-open {
   .modal-nav {
     width: 38px;
     height: 38px;
-    font-size: 29px;
+    font-size: 0;
   }
 
   .modal-prev {

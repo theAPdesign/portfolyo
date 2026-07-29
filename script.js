@@ -7,9 +7,12 @@ const modalCloseButtons = document.querySelectorAll("[data-close-modal]");
 const modalPrev = document.querySelector("[data-gallery-prev]");
 const modalNext = document.querySelector("[data-gallery-next]");
 const showMoreProjects = document.querySelector("[data-show-more-projects]");
+const toolsGrid = document.querySelector(".tools-grid");
+const showMoreTools = document.querySelector("[data-show-more-tools]");
 let activeGallery = [];
 let activeIndex = 0;
 const expandedPanels = new Set();
+let areToolsExpanded = false;
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const revealTargets = document.querySelectorAll(".section, .site-footer");
@@ -72,6 +75,144 @@ const getVisibleColumnCount = () => {
 };
 
 const getActivePanel = () => document.querySelector(".project-panel.active");
+
+const getVisibleToolColumnCount = () => {
+  if (window.matchMedia("(max-width: 560px)").matches) {
+    return 2;
+  }
+
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    return 3;
+  }
+
+  return 5;
+};
+
+const getToolLimit = () => getVisibleToolColumnCount() * 2;
+
+const applyToolsLimit = (isExpanded) => {
+  if (!toolsGrid) {
+    return;
+  }
+
+  const cards = Array.from(toolsGrid.querySelectorAll(".tool-card"));
+  const visibleLimit = getToolLimit();
+
+  cards.forEach((card, index) => {
+    card.classList.toggle("is-hidden", !isExpanded && index >= visibleLimit);
+  });
+};
+
+const measureToolsHeight = (isExpanded) => {
+  if (!toolsGrid) {
+    return 0;
+  }
+
+  const cards = Array.from(toolsGrid.querySelectorAll(".tool-card"));
+  const previousHiddenStates = cards.map((card) => card.classList.contains("is-hidden"));
+
+  applyToolsLimit(isExpanded);
+  const height = toolsGrid.scrollHeight;
+
+  cards.forEach((card, index) => {
+    card.classList.toggle("is-hidden", previousHiddenStates[index]);
+  });
+
+  return height;
+};
+
+const updateToolsVisibility = () => {
+  if (!toolsGrid || !showMoreTools) {
+    return;
+  }
+
+  const cards = toolsGrid.querySelectorAll(".tool-card");
+  const hasMoreItems = cards.length > getToolLimit();
+
+  applyToolsLimit(areToolsExpanded);
+  toolsGrid.style.maxHeight = "";
+  showMoreTools.hidden = !hasMoreItems;
+  showMoreTools.textContent = areToolsExpanded ? "Daha Az Gör" : "Daha Fazla Gör";
+  showMoreTools.setAttribute("aria-expanded", String(areToolsExpanded));
+};
+
+const scrollToolsSection = (toEnd) => {
+  const toolsSection = document.querySelector("#yetenekler");
+
+  if (!toolsSection) {
+    return;
+  }
+
+  const rect = toolsSection.getBoundingClientRect();
+  const targetTop = toEnd
+    ? window.scrollY + rect.bottom - window.innerHeight + 24
+    : window.scrollY + rect.top - 84;
+
+  window.scrollTo({
+    top: Math.max(0, targetTop),
+    behavior: reduceMotionQuery.matches ? "auto" : "smooth",
+  });
+};
+
+const animateToolsGrid = (shouldExpand) => {
+  if (!toolsGrid) {
+    return;
+  }
+
+  const startHeight = toolsGrid.scrollHeight;
+  const endHeight = shouldExpand ? measureToolsHeight(true) : measureToolsHeight(false);
+
+  toolsGrid.style.maxHeight = `${startHeight}px`;
+  toolsGrid.offsetHeight;
+
+  if (shouldExpand) {
+    areToolsExpanded = true;
+    applyToolsLimit(true);
+  }
+
+  if (showMoreTools) {
+    showMoreTools.textContent = shouldExpand ? "Daha Az Gör" : "Daha Fazla Gör";
+    showMoreTools.setAttribute("aria-expanded", String(shouldExpand));
+  }
+
+  requestAnimationFrame(() => {
+    toolsGrid.style.maxHeight = `${endHeight}px`;
+  });
+
+  let transitionFinished = false;
+
+  const finishTransition = () => {
+    if (transitionFinished) {
+      return;
+    }
+
+    transitionFinished = true;
+
+    if (!shouldExpand) {
+      areToolsExpanded = false;
+      applyToolsLimit(false);
+    }
+
+    toolsGrid.style.maxHeight = "";
+    updateToolsVisibility();
+    scrollToolsSection(shouldExpand);
+  };
+
+  const onTransitionEnd = (event) => {
+    if (event.target !== toolsGrid || event.propertyName !== "max-height") {
+      return;
+    }
+
+    toolsGrid.removeEventListener("transitionend", onTransitionEnd);
+    finishTransition();
+  };
+
+  toolsGrid.addEventListener("transitionend", onTransitionEnd);
+  window.setTimeout(() => {
+    toolsGrid.removeEventListener("transitionend", onTransitionEnd);
+    finishTransition();
+  }, 520);
+};
 
 const applyPanelLimit = (panel, isExpanded) => {
   const cards = Array.from(panel.querySelectorAll(".media-card"));
@@ -299,7 +440,23 @@ showMoreProjects.addEventListener("click", () => {
   animateProjectPanel(activePanel, shouldExpand);
 });
 
-window.addEventListener("resize", updateProjectVisibility);
+showMoreTools?.addEventListener("click", () => {
+  const shouldExpand = !areToolsExpanded;
+
+  if (reduceMotionQuery.matches) {
+    areToolsExpanded = shouldExpand;
+    updateToolsVisibility();
+    scrollToolsSection(shouldExpand);
+    return;
+  }
+
+  animateToolsGrid(shouldExpand);
+});
+
+window.addEventListener("resize", () => {
+  updateProjectVisibility();
+  updateToolsVisibility();
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !modal.hidden) {
@@ -316,3 +473,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 updateProjectVisibility();
+updateToolsVisibility();
