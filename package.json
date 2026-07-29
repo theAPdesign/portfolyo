@@ -7,7 +7,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "find dist -name .DS_Store -delete 2>/dev/null || true; rm -rf dist && mkdir -p dist/Videolar && cp index.html 404.html styles.css script.js dist/ && cp -R assets dist/assets && find Videolar -maxdepth 1 -type f ! -name 'Video #1.mp4' ! -name 'Video #4.mp4' ! -name 'Video #6.mp4' ! -name 'Video #7.mp4' ! -name 'Video #9.mp4' -exec cp {} dist/Videolar/ \\; && cp -R Fotoğraflar dist/Fotoğraflar && cp -R Logolar dist/Logolar && cp -R Bağlantılar dist/Bağlantılar && find dist -name .DS_Store -delete",
+    "build": "find dist -name .DS_Store -delete 2>/dev/null || true; rm -rf dist && mkdir -p dist && cp index.html 404.html styles.css script.js dist/ && if [ -d assets ]; then cp -R assets dist/assets; fi && if [ -d videolar ]; then mkdir -p dist/videolar && find videolar -maxdepth 1 -type f ! -name 'Video #1.mp4' ! -name 'Video #4.mp4' ! -name 'Video #6.mp4' ! -name 'Video #7.mp4' ! -name 'Video #9.mp4' -exec cp {} dist/videolar/ \\;; fi && if [ -d fotograflar ]; then cp -R fotograflar dist/fotograflar; fi && if [ -d logolar ]; then cp -R logolar dist/logolar; fi && if [ -d baglantilar ]; then cp -R baglantilar dist/baglantilar; fi && find dist -name .DS_Store -delete",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
