@@ -21,23 +21,98 @@
         <div class="nav-links">
           <a class="active" href="./">Anasayfa</a>
           <a href="#hakkimda">Hakkımda</a>
+          <a href="#yetenekler">Yetenekler</a>
           <a href="#projeler">Projeler</a>
-          <a href="#iletisim">İletişim</a>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
+        <div class="floating-icons" aria-label="Tasarim alanlari ikonlari">
+          <span class="icon-card icon-card-one" aria-label="Kalem">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-two" aria-label="Renk paleti">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="13.5" cy="6.5" r="2.5" />
+              <circle cx="6.5" cy="13.5" r="2.5" />
+              <circle cx="17.5" cy="15.5" r="2.5" />
+              <path d="M13 9 8.5 12" />
+              <path d="m9 14.5 6 1" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-three" aria-label="Katmanlar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m12 3 9 5-9 5-9-5Z" />
+              <path d="m3 12 9 5 9-5" />
+              <path d="m3 16 9 5 9-5" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-four" aria-label="Video oynatici">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 7 8 5-8 5Z" />
+              <rect x="3" y="4" width="18" height="16" rx="3" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-five" aria-label="Film">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="5" width="16" height="14" rx="3" />
+              <path d="M8 5V3" />
+              <path d="M16 5V3" />
+              <path d="M8 19v2" />
+              <path d="M16 19v2" />
+              <path d="M4 10h16" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-six" aria-label="Timeline ayarlari">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16" />
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+              <circle cx="8" cy="6" r="2" />
+              <circle cx="14" cy="12" r="2" />
+              <circle cx="11" cy="18" r="2" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-seven" aria-label="Kod">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m8 9-4 3 4 3" />
+              <path d="m16 9 4 3-4 3" />
+              <path d="m14 5-4 14" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-eight" aria-label="Web arayuzu">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="3" />
+              <path d="M3 9h18" />
+              <path d="M8 13h4" />
+              <path d="M8 16h8" />
+            </svg>
+          </span>
+          <span class="icon-card icon-card-nine" aria-label="Imlec">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m5 3 14 8-6 2-2 6Z" />
+              <path d="m13 13 5 5" />
+            </svg>
+          </span>
+        </div>
         <div class="hero-copy">
-          <p class="hero-tag">Portfolyo</p>
-          <h1 id="hero-title">Merhaba, ben yaratıcı bir tasarımcıyım.</h1>
+          <p class="hero-wave" aria-hidden="true">👋🏻</p>
+          <h1 id="hero-title">
+            <span class="intro">Merhaba, ben</span>
+            <span class="name-gradient">Abdullah Paçal.</span>
+          </h1>
           <p class="hero-text">
-            Markalar için sade, işlevsel ve akılda kalıcı dijital deneyimler tasarlıyorum.
+            Grafik Tasarım / Video Tasarım / Web Tasarım alanlarında geçmişten
+            günümüze tüm projelerimi inceleyebilirsiniz.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projeler">Projelerimi Gör</a>
-            <a class="button secondary" href="#iletisim">İletişime Geç</a>
+            <a class="button cv-button disabled" href="#" aria-disabled="true">CV İndir</a>
           </div>
         </div>
       </section>
@@ -45,81 +120,623 @@
       <section id="hakkimda" class="section about" aria-labelledby="about-title">
         <div class="section-heading">
           <p class="eyebrow">Hakkımda</p>
-          <h2 id="about-title">Fikirleri yalın ve etkili görsellere dönüştürüyorum.</h2>
+          <h2 id="about-title">
+            Fikirleri yalın, güçlü ve etkili görsel ve video deneyimlere dönüştürüyorum.
+          </h2>
         </div>
         <div class="about-content">
           <p>
-            Burası sonradan kolayca güncelleyebileceğin kısa bir tanıtım alanı.
-            Tasarım sürecimde markanın karakterini, kullanıcı ihtiyacını ve sade
-            bir görsel dili aynı çizgide buluşturmaya odaklanıyorum.
+            9 yıldır markaların fikirlerini güçlü görsel kimliklere, dikkat çekici
+            içeriklere ve etkili dijital deneyimlere dönüştürüyorum. Logo ve kurumsal
+            kimlikten sosyal medya tasarımlarına; video, motion graphic ve web
+            projelerine kadar farklı disiplinlerde üretim yapıyorum.
+            <span class="about-emphasis">
+              Çünkü ortaya koyduğum her işin hem markanın hikâyesini hem de benim
+              tasarım anlayışımı yansıttığına inanıyorum.
+            </span>
           </p>
           <ul class="tag-list" aria-label="Yetenekler">
-            <li>Grafik Tasarım</li>
-            <li>UI/UX</li>
-            <li>Marka Kimliği</li>
-            <li>Web Tasarım</li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 8v8l8 5 8-5V8Z" /><path d="m12 8 4 2.5v3L12 16l-4-2.5v-3Z" /></svg>
+              Logo
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6Z" /><path d="M14 3v4h4" /><path d="M9 12h6" /><path d="M9 16h4" /></svg>
+              Broşür
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="3" /><path d="M8 10h8" /><path d="M8 14h5" /><circle cx="17" cy="17" r="2" /></svg>
+              Sosyal Medya Postları
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m10 9 5 3-5 3Z" /></svg>
+              Video
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 1 8 8" /><path d="M4 12h5l-2-2" /><path d="M14 8h4" /><path d="M14 12h3" /><path d="M14 16h2" /></svg>
+              Motion Graphic
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M3 9h18" /><path d="M8 14h8" /></svg>
+              Web Sitesi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2" /><rect x="13" y="4" width="7" height="7" rx="2" /><rect x="4" y="13" width="16" height="7" rx="2" /></svg>
+              UI/UX
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3" /><path d="M12 18v3" /><path d="M3 12h3" /><path d="M18 12h3" /><path d="m5 5 2 2" /><path d="m17 17 2 2" /><path d="m19 5-2 2" /><path d="m7 17-2 2" /><circle cx="12" cy="12" r="4" /></svg>
+              Yapay Zeka Araçları
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11" /><path d="M9 12h11" /><path d="M9 18h11" /><path d="m4 6 1 1 2-2" /><path d="m4 12 1 1 2-2" /><path d="m4 18 1 1 2-2" /></svg>
+              Proje Yönetimi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11v10H4Z" /><path d="m15 10 5-3v10l-5-3Z" /><path d="M7 7l1-3h4l1 3" /></svg>
+              Video Çekimi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" /><circle cx="8" cy="6" r="2" /><circle cx="14" cy="12" r="2" /><circle cx="11" cy="18" r="2" /></svg>
+              Kurgu
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16" /><path d="M4 17h16" /><path d="M8 4v16" /><path d="M16 4v16" /></svg>
+              Montaj
+            </li>
           </ul>
         </div>
       </section>
 
-      <section id="projeler" class="section projects" aria-labelledby="projects-title">
+      <section id="yetenekler" class="section tools" aria-labelledby="tools-title">
         <div class="section-heading">
-          <p class="eyebrow">Projeler</p>
-          <h2 id="projects-title">Seçili çalışmalar</h2>
+          <p class="eyebrow">Yetenekler</p>
+          <h2 id="tools-title">Üretim sürecinde kullandığım programlar.</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-visual visual-one" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-category">Marka Kimliği</p>
-              <h3>Studio Nova</h3>
-              <p>Minimal logo sistemi, renk paleti ve sosyal medya şablonları.</p>
-            </div>
+        <div class="tools-grid" aria-label="Kullanılan programlar">
+          <article class="tool-card tool-ps">
+            <span class="tool-logo"><img src="./Logolar/Adobe%20Photoshop.png" alt=""></span>
+            <h3>Adobe Photoshop</h3>
           </article>
-          <article class="project-card">
-            <div class="project-visual visual-two" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-category">UI/UX</p>
-              <h3>Flow Dashboard</h3>
-              <p>Veri takibi için sade, okunabilir ve responsive arayüz tasarımı.</p>
-            </div>
+          <article class="tool-card tool-ai">
+            <span class="tool-logo"><img src="./Logolar/Adobe%20İllistartor.webp" alt=""></span>
+            <h3>Adobe Illustrator</h3>
           </article>
-          <article class="project-card">
-            <div class="project-visual visual-three" aria-hidden="true"></div>
-            <div class="project-body">
-              <p class="project-category">Web Tasarım</p>
-              <h3>Local Goods</h3>
-              <p>Küçük işletmeler için hızlı açılan tanıtım ve ürün vitrini sayfası.</p>
-            </div>
+          <article class="tool-card tool-pr">
+            <span class="tool-logo"><img src="./Logolar/Adobe%20Premier%20Pro.webp" alt=""></span>
+            <h3>Adobe Premiere Pro</h3>
+          </article>
+          <article class="tool-card tool-ae">
+            <span class="tool-logo"><img src="./Logolar/Adobe%20After%20Effect.webp" alt=""></span>
+            <h3>Adobe After Effects</h3>
+          </article>
+          <article class="tool-card tool-id">
+            <span class="tool-logo"><img src="./Logolar/Adobe%20InDesign.webp" alt=""></span>
+            <h3>Adobe InDesign</h3>
+          </article>
+          <article class="tool-card tool-figma">
+            <span class="tool-logo"><img src="./Logolar/Figma.webp" alt=""></span>
+            <h3>Figma</h3>
+          </article>
+          <article class="tool-card tool-canva">
+            <span class="tool-logo"><img src="./Logolar/Canva.png" alt=""></span>
+            <h3>Canva</h3>
+          </article>
+          <article class="tool-card tool-capcut">
+            <span class="tool-logo"><img src="./Logolar/Capcut.webp" alt=""></span>
+            <h3>CapCut</h3>
+          </article>
+          <article class="tool-card tool-chatgpt">
+            <span class="tool-logo"><img src="./Logolar/Chatgpt.jpg" alt=""></span>
+            <h3>ChatGPT</h3>
+          </article>
+          <article class="tool-card tool-codex">
+            <span class="tool-logo"><img src="./Logolar/Codex.webp" alt=""></span>
+            <h3>Codex</h3>
+          </article>
+          <article class="tool-card tool-elevenlabs">
+            <span class="tool-logo"><img src="./Logolar/Elevenlabs.png" alt=""></span>
+            <h3>ElevenLabs</h3>
+          </article>
+          <article class="tool-card tool-fl">
+            <span class="tool-logo"><img src="./Logolar/FL%20Studio.png" alt=""></span>
+            <h3>FL Studio</h3>
+          </article>
+          <article class="tool-card tool-grok">
+            <span class="tool-logo"><img src="./Logolar/Grok%20AI.png" alt=""></span>
+            <h3>Grok AI</h3>
+          </article>
+          <article class="tool-card tool-hailuo">
+            <span class="tool-logo"><img src="./Logolar/Hailuo%20AI.png" alt=""></span>
+            <h3>Hailuo AI</h3>
+          </article>
+          <article class="tool-card tool-krea">
+            <span class="tool-logo"><img src="./Logolar/Krea%20AI.png" alt=""></span>
+            <h3>Krea AI</h3>
+          </article>
+          <article class="tool-card tool-leonardo">
+            <span class="tool-logo"><img src="./Logolar/Leonardo%20AI.png" alt=""></span>
+            <h3>Leonardo AI</h3>
+          </article>
+          <article class="tool-card tool-heygen">
+            <span class="tool-logo"><img src="./Logolar/heygen.png" alt=""></span>
+            <h3>HeyGen</h3>
           </article>
         </div>
       </section>
 
-      <section id="iletisim" class="section contact" aria-labelledby="contact-title">
-        <div class="section-heading">
-          <p class="eyebrow">İletişim</p>
-          <h2 id="contact-title">Yeni bir fikir konuşalım.</h2>
-        </div>
-        <div class="contact-panel">
-          <p>
-            Projen, marka kimliğin veya web tasarım ihtiyacın için e-posta ya da
-            sosyal medya üzerinden ulaşabilirsin.
-          </p>
-          <div class="contact-links" aria-label="Iletisim baglantilari">
-            <a href="mailto:hello@example.com">hello@example.com</a>
-            <a href="https://instagram.com/username" rel="noreferrer">Instagram</a>
-            <a href="https://behance.net/username" rel="noreferrer">Behance</a>
+      <section id="projeler" class="section projects" aria-labelledby="projects-title">
+        <div class="projects-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Projeler</p>
+            <h2 id="projects-title">Seçili çalışmalar</h2>
+          </div>
+          <div class="project-tabs" role="tablist" aria-label="Proje turleri">
+            <button
+              class="project-tab active"
+              id="photos-tab"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="photos-panel"
+              data-panel="photos-panel"
+            >
+              Fotoğraflar
+            </button>
+            <button
+              class="project-tab"
+              id="videos-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="videos-panel"
+              data-panel="videos-panel"
+            >
+              Videolar
+            </button>
           </div>
         </div>
+
+        <div class="project-panels">
+          <div
+            class="project-panel active"
+            id="photos-panel"
+            role="tabpanel"
+            aria-labelledby="photos-tab"
+          >
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%231.jpg"
+              data-title="Fotoğraf Çalışması 01"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%231.jpg" alt="Fotoğraf Çalışması 01">
+            </button>
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%232.jpg"
+              data-title="Fotoğraf Çalışması 02"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%232.jpg" alt="Fotoğraf Çalışması 02">
+            </button>
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%233.jpg"
+              data-title="Fotoğraf Çalışması 03"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%233.jpg" alt="Fotoğraf Çalışması 03">
+            </button>
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%234.jpg"
+              data-title="Fotoğraf Çalışması 04"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%234.jpg" alt="Fotoğraf Çalışması 04">
+            </button>
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%235.jpg"
+              data-title="Fotoğraf Çalışması 05"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%235.jpg" alt="Fotoğraf Çalışması 05">
+            </button>
+            <button
+              class="media-card photo-card"
+              type="button"
+              data-type="photo"
+              data-src="./Fotoğraflar/Fotoğraf%20%236.jpg"
+              data-title="Fotoğraf Çalışması 06"
+              data-category="Grafik Tasarım"
+              data-description="Portfolyoya eklenen seçili görsel çalışma."
+            >
+              <img src="./Fotoğraflar/Fotoğraf%20%236.jpg" alt="Fotoğraf Çalışması 06">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%237.jpg" data-title="Fotoğraf Çalışması 07" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%237.jpg" alt="Fotoğraf Çalışması 07">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%238.jpg" data-title="Fotoğraf Çalışması 08" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%238.jpg" alt="Fotoğraf Çalışması 08">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%239.jpg" data-title="Fotoğraf Çalışması 09" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%239.jpg" alt="Fotoğraf Çalışması 09">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2310.jpg" data-title="Fotoğraf Çalışması 10" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2310.jpg" alt="Fotoğraf Çalışması 10">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2311.jpg" data-title="Fotoğraf Çalışması 11" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2311.jpg" alt="Fotoğraf Çalışması 11">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2312.jpg" data-title="Fotoğraf Çalışması 12" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2312.jpg" alt="Fotoğraf Çalışması 12">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2313.jpg" data-title="Fotoğraf Çalışması 13" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2313.jpg" alt="Fotoğraf Çalışması 13">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2314.jpg" data-title="Fotoğraf Çalışması 14" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2314.jpg" alt="Fotoğraf Çalışması 14">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2315.jpg" data-title="Fotoğraf Çalışması 15" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2315.jpg" alt="Fotoğraf Çalışması 15">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2316.png" data-title="Fotoğraf Çalışması 16" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2316.png" alt="Fotoğraf Çalışması 16">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2317.png" data-title="Fotoğraf Çalışması 17" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2317.png" alt="Fotoğraf Çalışması 17">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2318.png" data-title="Fotoğraf Çalışması 18" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2318.png" alt="Fotoğraf Çalışması 18">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2319.png" data-title="Fotoğraf Çalışması 19" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2319.png" alt="Fotoğraf Çalışması 19">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2320.png" data-title="Fotoğraf Çalışması 20" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2320.png" alt="Fotoğraf Çalışması 20">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2321.png" data-title="Fotoğraf Çalışması 21" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2321.png" alt="Fotoğraf Çalışması 21">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2322.png" data-title="Fotoğraf Çalışması 22" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2322.png" alt="Fotoğraf Çalışması 22">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2323.png" data-title="Fotoğraf Çalışması 23" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2323.png" alt="Fotoğraf Çalışması 23">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2324.jpeg" data-title="Fotoğraf Çalışması 24" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2324.jpeg" alt="Fotoğraf Çalışması 24">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2325.png" data-title="Fotoğraf Çalışması 25" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2325.png" alt="Fotoğraf Çalışması 25">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2326.png" data-title="Fotoğraf Çalışması 26" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2326.png" alt="Fotoğraf Çalışması 26">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2327.jpg" data-title="Fotoğraf Çalışması 27" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2327.jpg" alt="Fotoğraf Çalışması 27">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2328.png" data-title="Fotoğraf Çalışması 28" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2328.png" alt="Fotoğraf Çalışması 28">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2329.png" data-title="Fotoğraf Çalışması 29" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2329.png" alt="Fotoğraf Çalışması 29">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2330.png" data-title="Fotoğraf Çalışması 30" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2330.png" alt="Fotoğraf Çalışması 30">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2331.png" data-title="Fotoğraf Çalışması 31" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2331.png" alt="Fotoğraf Çalışması 31">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2332.jpg" data-title="Fotoğraf Çalışması 32" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2332.jpg" alt="Fotoğraf Çalışması 32">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2334.png" data-title="Fotoğraf Çalışması 34" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2334.png" alt="Fotoğraf Çalışması 34">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2335.png" data-title="Fotoğraf Çalışması 35" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2335.png" alt="Fotoğraf Çalışması 35">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2336.png" data-title="Fotoğraf Çalışması 36" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2336.png" alt="Fotoğraf Çalışması 36">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2337.png" data-title="Fotoğraf Çalışması 37" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2337.png" alt="Fotoğraf Çalışması 37">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2338.png" data-title="Fotoğraf Çalışması 38" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2338.png" alt="Fotoğraf Çalışması 38">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2339.png" data-title="Fotoğraf Çalışması 39" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2339.png" alt="Fotoğraf Çalışması 39">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2335.jpg" data-title="Fotoğraf Çalışması 35 JPG" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2335.jpg" alt="Fotoğraf Çalışması 35 JPG">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2336.jpg" data-title="Fotoğraf Çalışması 36 JPG" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2336.jpg" alt="Fotoğraf Çalışması 36 JPG">
+            </button>
+            <button class="media-card photo-card" type="button" data-type="photo" data-src="./Fotoğraflar/Fotoğraf%20%2337.jpg" data-title="Fotoğraf Çalışması 37 JPG" data-category="Grafik Tasarım" data-description="Portfolyoya eklenen seçili görsel çalışma.">
+              <img src="./Fotoğraflar/Fotoğraf%20%2337.jpg" alt="Fotoğraf Çalışması 37 JPG">
+            </button>
+          </div>
+
+          <div
+            class="project-panel"
+            id="videos-panel"
+            role="tabpanel"
+            aria-labelledby="videos-tab"
+            hidden
+          >
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%231.mp4"
+              data-title="Video Çalışması 01"
+              data-category="Video Tasarım"
+              data-description="Kurgu, ritim ve görsel dil odağında hazırlanmış video projesi."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%231.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%232.mp4"
+              data-title="Video Çalışması 02"
+              data-category="Motion Graphic"
+              data-description="Marka enerjisini taşıyan hareketli grafik ve video düzenleme çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%232.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%233.mp4"
+              data-title="Video Çalışması 03"
+              data-category="Kurgu"
+              data-description="Sosyal medya ve dijital yayın için hazırlanmış dinamik kurgu çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%233.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%234.mp4"
+              data-title="Video Çalışması 04"
+              data-category="Video Çekimi"
+              data-description="Çekim ve montaj süreçleriyle tamamlanmış görsel anlatım projesi."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%234.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%235.mp4"
+              data-title="Video Çalışması 05"
+              data-category="Montaj"
+              data-description="Akıcı tempo ve temiz geçişlerle hazırlanan kısa format video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%235.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%236.mp4"
+              data-title="Video Çalışması 06"
+              data-category="Video Tasarım"
+              data-description="Dijital mecralar için hazırlanmış sade, ritmik ve marka odaklı video tasarımı."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%236.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%237.mp4"
+              data-title="Video Çalışması 07"
+              data-category="Video Tasarım"
+              data-description="Dijital yayınlar için hazırlanmış tamamlayıcı video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%237.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%238.mp4"
+              data-title="Video Çalışması 08"
+              data-category="Motion Graphic"
+              data-description="Hareket, tipografi ve ritim odağında hazırlanmış kısa video tasarımı."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%238.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%239.mp4"
+              data-title="Video Çalışması 09"
+              data-category="Kurgu"
+              data-description="Kurgu ve montaj süreci tamamlanmış seçili video işi."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%239.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2310.MP4"
+              data-title="Video Çalışması 10"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2310.MP4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2311.MP4"
+              data-title="Video Çalışması 11"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2311.MP4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2312.MP4"
+              data-title="Video Çalışması 12"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2312.MP4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2313.MP4"
+              data-title="Video Çalışması 13"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2313.MP4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2314.MP4"
+              data-title="Video Çalışması 14"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2314.MP4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2315.mp4"
+              data-title="Video Çalışması 15"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2315.mp4"></video>
+            </button>
+            <button
+              class="media-card video-card"
+              type="button"
+              data-type="video"
+              data-src="./Videolar/Video%20%2316.mp4"
+              data-title="Video Çalışması 16"
+              data-category="Video Tasarım"
+              data-description="Portfolyoya eklenen yeni seçili video çalışması."
+            >
+              <video muted playsinline preload="metadata" src="./Videolar/Video%20%2316.mp4"></video>
+            </button>
+          </div>
+        </div>
+        <div class="project-more">
+          <button class="button secondary" type="button" data-show-more-projects aria-expanded="false">
+            Daha Fazla Gör
+          </button>
+        </div>
       </section>
+
+      <section id="baglantilar" class="section links-section" aria-labelledby="links-title">
+        <div class="section-heading">
+          <p class="eyebrow">Bağlantılar</p>
+          <h2 id="links-title">Ek olarak kendi bünyemde yürüttüğüm projeler.</h2>
+        </div>
+        <div class="link-grid" aria-label="Baglantilar">
+          <a class="link-card link-ai" href="https://www.tiktok.com/@aikafasi" target="_blank" rel="noreferrer">
+            <span class="link-preview" aria-hidden="true">
+              <span class="link-mark"><img src="./Bağlantılar/AI%20Kafası.jpg" alt=""></span>
+              <span class="link-window"></span>
+            </span>
+            <span class="link-copy">
+              <span>TikTok</span>
+              <strong>AI Kafası</strong>
+              <small>tiktok.com/@aikafasi</small>
+            </span>
+          </a>
+          <a class="link-card link-history" href="https://www.tiktok.com/@design.history.time" target="_blank" rel="noreferrer">
+            <span class="link-preview" aria-hidden="true">
+              <span class="link-mark"><img src="./Bağlantılar/Design%20History.jpg" alt=""></span>
+              <span class="link-window"></span>
+            </span>
+            <span class="link-copy">
+              <span>TikTok</span>
+              <strong>Design History</strong>
+              <small>tiktok.com/@design.history.time</small>
+            </span>
+          </a>
+          <a class="link-card link-delit" href="https://www.tiktok.com/@delit.app" target="_blank" rel="noreferrer">
+            <span class="link-preview" aria-hidden="true">
+              <span class="link-mark"><img src="./Bağlantılar/Del-it%20Logo.jpg" alt=""></span>
+              <span class="link-window"></span>
+            </span>
+            <span class="link-copy">
+              <span>TikTok</span>
+              <strong>Del-it</strong>
+              <small>tiktok.com/@delit.app</small>
+            </span>
+          </a>
+          <a class="link-card link-ap" href="https://www.theapdesign.art" target="_blank" rel="noreferrer">
+            <span class="link-preview" aria-hidden="true">
+              <span class="link-mark"><img src="./Bağlantılar/theapdesign.png" alt=""></span>
+              <span class="link-window"></span>
+            </span>
+            <span class="link-copy">
+              <span>Website</span>
+              <strong>theApdesign</strong>
+              <small>theapdesign.art</small>
+            </span>
+          </a>
+        </div>
+      </section>
+
     </main>
+
+    <div class="media-modal" id="media-modal" aria-hidden="true" hidden>
+      <button class="modal-backdrop" type="button" data-close-modal aria-label="Onizlemeyi kapat"></button>
+      <div class="modal-sheet" role="dialog" aria-modal="true" aria-label="Medya onizlemesi">
+        <button class="modal-close" type="button" data-close-modal aria-label="Onizlemeyi kapat">×</button>
+        <button class="modal-nav modal-prev" type="button" data-gallery-prev aria-label="Onceki calisma">‹</button>
+        <button class="modal-nav modal-next" type="button" data-gallery-next aria-label="Sonraki calisma">›</button>
+        <div class="modal-preview" id="modal-preview"></div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <p>© 2026 The AP Design</p>
-      <div class="footer-links">
-        <a href="https://instagram.com/username" rel="noreferrer">Instagram</a>
-        <a href="https://behance.net/username" rel="noreferrer">Behance</a>
-      </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

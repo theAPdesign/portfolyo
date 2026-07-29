@@ -7,7 +7,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html 404.html styles.css dist/ && cp -R assets dist/assets",
+    "build": "find dist -name .DS_Store -delete 2>/dev/null || true; rm -rf dist && mkdir -p dist && cp index.html 404.html styles.css script.js dist/ && cp -R assets dist/assets && cp -R Videolar dist/Videolar && cp -R Fotoğraflar dist/Fotoğraflar && cp -R Logolar dist/Logolar && cp -R Bağlantılar dist/Bağlantılar && find dist -name .DS_Store -delete",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
