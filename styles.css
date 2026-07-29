@@ -1327,6 +1327,7 @@ body.modal-open {
   }
 
   .nav-pill {
+    width: fit-content;
     min-height: 44px;
     gap: 5px;
     border-radius: 999px;
@@ -1344,13 +1345,7 @@ body.modal-open {
   }
 
   .nav-links {
-    gap: 2px;
-  }
-
-  .nav-links a {
-    min-height: 32px;
-    padding: 0 7px;
-    font-size: 11.5px;
+    display: none;
   }
 
   .hero,
